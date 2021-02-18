@@ -3,7 +3,7 @@
 This repository presents a new dataset for the Music Emotion Recognition (MER) task, consisting in audio, lyrics and listeners' comments modalities, created by employing different techniques such as web-scraping, manual cleaning of social tags and manual identification of patterns with the purpose of automatization of a task.
 
 ### TO MODIFY
-consiting in : deezer_id, song_meanings_id, valence, arousal, list of (emotion_word, count)
+consisting in : deezer_id, song_meanings_id, valence, arousal, list of (emotion_word, count)
 
 
 ## Emotion Representation
@@ -94,8 +94,8 @@ Another filtering process is performed considering the duration of songs and 32 
 
 ## Lyrics Cleaning
 
-The raw lyrics data contain a great amount of noise, as they are written by different users on *https://songmeanings.com/*, with no set of rules or format to be followed. Therefore, cleaning the lyrics data is a meticulous process that involves manual curating and a considerable amount of time.
-The lyrics have a particular structure, different than usual text data. Hence, before applying cleaning procedures commonly used in **NLP** tasks, this structure is studied for patterns identification with the scope of finding a set of rule that allow for automatization.
+The raw lyrics data contain a great amount of noise, as they are written by different users on *https://songmeanings.com/*, with no set of rules or format to be followed. Therefore, cleaning the lyrics data is a meticulous process that involves manual curating and a considerable amount of time. The lyrics have a particular structure, different than usual text data. Hence, before applying cleaning procedures commonly used in **NLP** tasks, this structure is studied for patterns identification with the scope of finding a set of rule that allow for automatization.
+
 In the raw lyrics text, there are different types of tags, such as repetitive instructions (*'repeat', 'x2', 'repeat once'*, etc.), announcement of artists singing a particular part of the song (*'[eminem]', '[all:]', '2pac'*, etc.), structural information (*'chorus', 'verse', 'bridge', 'pre-chorus'*, etc.).
 As a result of a series of manual transformations and removals, different types of patterns are revealed and used for automatization of the cleaning process.
 In differentiating between the types of patterns discovered, the *newline* (\n) character has the greatest role.
