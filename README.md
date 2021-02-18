@@ -65,18 +65,31 @@ The [NRC VAD Lexicon](https://www.researchgate.net/publication/334118031_Obtaini
 
 Using this resource, the 27 words representing emotions are embedded into valence-arousal space, taking into account their summed count at song-level.
 For every song, the valence and arousal scores extracted from the VAD Lexicon for each word are multiplied by the normalized count and the final ratings for the song are obtained by computing the average of the sum of the weighted values for valence and arousal dimensions:
+
 <img src="https://render.githubusercontent.com/render/math?math=Valence(S) = \displaystyle{\frac{\sum_{w} valence_{w}\cdot count_{S,w}}{\sum_{w} count_{S,w}}}">
 
 <img src="https://render.githubusercontent.com/render/math?math=Arousal(S) = \displaystyle{\frac{\sum_{w} arousal_{w}\cdot count_{S,w}}{\sum_{w} count_{S,w}}}">  ,  where *S* is a song in the dataset and *w* an emotion word in *S*.
+
+This annotation strategy resulted in an unbalanced distribution of the data in the 2D space of emotions, with quadrant 2 appearing heavily underrepresented. This reveals that strong negative emotions such as *'anger', 'aggressivity'* are not frequently perceived in music.
+
+<img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/data_distribution.png" width=100%/>
+
+
+## Deezer Tracks Selection
+
+The next phase in creating a new dataset with valid information, is updating the Deezer IDs for the 10,579 annotated tracks. A number of 607 tracks are not found on Deezer platform and for 1,441 tracks with outdated IDs, replacements are found, with identical artist name and song title.
+
+Another filtering process is performed considering the duration of songs and 32 more tracks are removed, bringing the dataset to a size of 9,972 samples.
+
+
+## Data Cleaning
+
+
 
 ## Support Images
 
 <img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/circumplex_model.png" width=100%/>
 
-<img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/emotions_distribution.png" width=100%/>
-
-common support for MIR tasks in general
-common support for MIR tasks in general
 <img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/lyrics_repetition_patterns.png" width=100%/>
 
 <img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/lyrics_structural_patterns.png" width=100%/>
