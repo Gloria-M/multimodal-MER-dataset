@@ -72,7 +72,7 @@ For every song, the valence and arousal scores extracted from the VAD Lexicon fo
 
 This annotation strategy resulted in an unbalanced distribution of the data in the 2D space of emotions, with quadrant 2 appearing heavily underrepresented. This reveals that strong negative emotions such as *'anger', 'aggressivity'* are not frequently perceived in music.
 
-<img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/data_distribution.png" width=100%/>
+<!-- <img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/data_distribution.png" width=100%/> -->
 
 
 ## Deezer Tracks Selection
