@@ -7,7 +7,7 @@ consiting in : deezer_id, song_meanings_id, valence, arousal, list of (emotion_w
 
 ## Base Dataset
 
-The largest dataset available that suits a regression approach of MER task is, at the moment of writing, the Deezer [Mood Detection Dataset](https://arxiv.org/abs/1809.07276). For each track, this set contains the corresponding *Deezer ID*, the *MSD ID*, the *artist* and *title* and values for *valence* and *arousal*. This data collected by researchers at Deezer is itself derived from the [Million Song Dataset](https://www.researchgate.net/publication/220723656_The_Million_Song_Dataset), a common support for MIR tasks in general.
+The largest dataset available that suits a regression approach of MER task is, at the moment of writing, the Deezer Mood Detection Dataset [(Delbouys et al., 2018)](https://arxiv.org/abs/1809.07276). For each track, this set contains the corresponding *Deezer ID*, the *MSD ID*, the *artist* and *title* and values for *valence* and *arousal*. This data collected by researchers at Deezer is itself derived from the Million Song Dataset [(Bertin-Mahieux et al., 2011)](https://www.researchgate.net/publication/220723656_The_Million_Song_Dataset), a common support for MIR tasks in general.
 
 
 ## Lyrics and comments
