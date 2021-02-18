@@ -86,12 +86,24 @@ Another filtering process is performed considering the duration of songs and 32 
 
 ## Data Cleaning
 
+### Lyrics Analysis
+
+The raw lyrics data contain a great amount of noise, as they are written by different users on *https://songmeanings.com/*, with no set of rules or format to be followed. Therefore, cleaning the lyrics data is a meticulous process that involves manual curating and a considerable amount of time.
+The lyrics have a particular structure, different than usual text data. Hence, before applying cleaning procedures commonly used in **NLP** tasks, this structure is studied for patterns identification with the scope of finding a set of rule that allow for automatization.
+In the raw lyrics text, there are different types of tags, such as repetitive instructions (*'repeat', 'x2', 'repeat once'*, etc.), announcement of artists singing a particular part of the song (*'[eminem]', '[all:]', '2pac'*, etc.), structural information (*'chorus', 'verse', 'bridge', 'pre-chorus'*, etc.).
+As a result of a series of manual transformations and removals, different types of patterns are revealed and used for automatization of the cleaning process.
+In differentiating between the types of patterns discovered, the *newline* (\n) character has the greatest role.
+The most important patterns are ones playing a role in changing the text of lyrics, as described below:
+
+<img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/lyrics_repetition_patterns.png" width=100%/>
+
+The structural instructions are another class of patterns discovered, with no relevance for the strategy chosen in recognizing emotions in music, therefore are removed from the lyrics text. They may contain tags present in the important patterns mentioned earlier, but in different configurations defined by the occurrence of the *newline* character.
+
+<img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/lyrics_structural_patterns.png" width=100%/>
+
+These transformations bring the lyrics text to a format that allows applying common preprocessing techniques used in NLP tasks.
 
 
 ## Support Images
 
 <img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/circumplex_model.png" width=100%/>
-
-<img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/lyrics_repetition_patterns.png" width=100%/>
-
-<img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/lyrics_structural_patterns.png" width=100%/>
