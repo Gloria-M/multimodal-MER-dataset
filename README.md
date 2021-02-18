@@ -16,7 +16,7 @@ The largest dataset available that suits a regression approach of MER task is, a
 <img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/tags_to_emotions.png" width=100%/>
 
 common support for MIR tasks in general
-<img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/emotions_groups.png" width=100%/>
+<!-- <img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/emotions_groups.png" width=100%/> -->
 common support for MIR tasks in general
 <img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/lyrics_repetition_patterns.png" width=90%/>
 
