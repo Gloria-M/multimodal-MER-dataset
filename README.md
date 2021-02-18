@@ -8,7 +8,7 @@ consiting in : deezer_id, song_meanings_id, valence, arousal, list of (emotion_w
 
 ## Emotion Representation
 
-The Circumplex Model of Affect, defined in [Russell, 1980]](https://www.researchgate.net/publication/235361517_A_Circumplex_Model_of_Affect), that maps emotions to a 2D space defined by **valence** and **arousal** dimensions. Valence, displayed as the horizontal axis, represents the energy of emotion, ranging from positive to negative, while arousal, the vertical axis, represents the amount of intensity in emotion, ranging from low to high.
+The Circumplex Model of Affect, defined in [[Russell, 1980]](https://www.researchgate.net/publication/235361517_A_Circumplex_Model_of_Affect), that maps emotions to a 2D space defined by **valence** and **arousal** dimensions. Valence, displayed as the horizontal axis, represents the energy of emotion, ranging from positive to negative, while arousal, the vertical axis, represents the amount of intensity in emotion, ranging from low to high. This scheme allows for a division of the emotion space in four quadrants.
 
 <img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/circumplex_model.png" width=100%/>
 
