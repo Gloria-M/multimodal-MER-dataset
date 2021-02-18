@@ -13,7 +13,7 @@ consiting in : deezer_id, song_meanings_id, valence, arousal, list of (emotion_w
 
 ## Base Dataset
 
-The largest dataset available that suits a regression approach of MER task is, at the moment of writing, the Deezer Mood Detection Dataset [(Delbouys et al., 2018)](https://arxiv.org/abs/1809.07276). For each track, this set contains the corresponding *Deezer ID*, the *MSD ID*, the *artist* and *title* and values for *valence* and *arousal*. This data collected by researchers at Deezer is itself derived from the Million Song Dataset [(Bertin-Mahieux et al., 2011)](https://www.researchgate.net/publication/220723656_The_Million_Song_Dataset), a common support for MIR tasks in general.
+The largest dataset available that suits a regression approach of MER task is, at the moment of writing, the Deezer Mood Detection Dataset [[Delbouys et al., 2018]](https://arxiv.org/abs/1809.07276). For each track, this set contains the corresponding *Deezer ID*, the *MSD ID*, the *artist* and *title* and values for *valence* and *arousal*. This data collected by researchers at Deezer is itself derived from the Million Song Dataset [[Bertin-Mahieux et al., 2011]](https://www.researchgate.net/publication/220723656_The_Million_Song_Dataset), a common support for MIR tasks in general.
 
 
 ## Lyrics and comments
@@ -31,7 +31,7 @@ Starting with the 18,644 tracks selected by the researchers at Deezer, after per
 
 ## Annotation
 
-The annotation process of the new dataset is performed by following steps similar to  [Hu et al.,2009](https://www.semanticscholar.org/paper/Lyric-Text-Mining-in-Music-Mood-Classification-Hu-Downie/e658ec86e033aae370ba680118a04431071cafe1), making use of the social tags associated with songs by listeners.
+The annotation process of the new dataset is performed by following steps similar to  [[Hu et al.,2009]](https://www.semanticscholar.org/paper/Lyric-Text-Mining-in-Music-Mood-Classification-Hu-Downie/e658ec86e033aae370ba680118a04431071cafe1), making use of the social tags associated with songs by listeners.
 
 Mapping the tracks in the Deezer dataset to the *last.fm* database by their MSD ID, the social tags recorded in year 2011 can be retrieved. Along each tag associated with each song, a normalized value representing the number of listeners choosing the tag is provided.
 
@@ -48,7 +48,7 @@ The considerable volume of tags collected (795,368 unique tags) is extremely noi
 * tags with musical instruments *referrence*
 * tags containing nationalities words
 
-In order to select the tags akin to an emotion descriptor, a list of affect-related words must first be composed. For this process, the affective lexicon WordNet Affect  [Valitutti, 2004](http://corpustext.com/reference/affect_wordnet.html) is used to create the base. This list is cleaned and extended with synonyms, related words and keywords contained in expressions describing motions, found using  the comprehensive Merriam-Webster online [dictionary](https://www.merriam-webster.com/dictionary/dictionary) and [thesaurus](https://www.merriam-webster.com/thesaurus). These words are grouped according to their meaning in 27 emotional categories, named with a corresponding emotion (\tabref{tab:chp5:emotion_groups}), using similarity paths defined in WordNet [Bentivogli et al., 2004](https://www.researchgate.net/publication/228902778_Revising_the_WORDNET_DOMAINS_Hierarchy_semantics_coverage_and_balancing) and, again, the Merriam-Webster Thesaurus.
+In order to select the tags akin to an emotion descriptor, a list of affect-related words must first be composed. For this process, the affective lexicon WordNet Affect  [[Valitutti, 2004]](http://corpustext.com/reference/affect_wordnet.html) is used to create the base. This list is cleaned and extended with synonyms, related words and keywords contained in expressions describing motions, found using  the comprehensive Merriam-Webster online [dictionary](https://www.merriam-webster.com/dictionary/dictionary) and [thesaurus](https://www.merriam-webster.com/thesaurus). These words are grouped according to their meaning in 27 emotional categories, named with a corresponding emotion (\tabref{tab:chp5:emotion_groups}), using similarity paths defined in WordNet [Bentivogli et al., 2004](https://www.researchgate.net/publication/228902778_Revising_the_WORDNET_DOMAINS_Hierarchy_semantics_coverage_and_balancing) and, again, the Merriam-Webster Thesaurus.
 
 <img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/emotions_groups.png" width=100%/>
 
