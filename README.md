@@ -13,7 +13,7 @@ The largest dataset available that suits a regression approach of MER task is, a
 
 
 
-
+<center>
 <table style="width:100%">
   <col align="left">
   <col align="left">
@@ -161,7 +161,7 @@ The largest dataset available that suits a regression approach of MER task is, a
   </tr>
 </tbody>
 </table>
-
+</center>
 
 
 |                	|                                                            	| No. of unique tags 	|
