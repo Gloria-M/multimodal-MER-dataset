@@ -165,6 +165,7 @@ The largest dataset available that suits a regression approach of MER task is, a
 
 
 <center>
+
 |                	|                                                            	| No. of unique tags 	|
 |----------------	|:----------------------------------------------------------:	|:------------------:	|
 | aggressiveness 	|     aggressive, belligerent, hostile, violent, wild ...    	|         44         	|
@@ -194,4 +195,5 @@ The largest dataset available that suits a regression approach of MER task is, a
 | pessimism      	|      cynical, misanthropic, negative, pessimistic ...      	|         17         	|
 | romanticism    	|               amor, romantic, sweet, you ...               	|         109        	|
 | sadness        	|     cry, droopy, gloomy, melancholic, sad, unhappy ...     	|         400        	|
+
 </center
