@@ -49,15 +49,30 @@ In order to select the tags akin to an emotion descriptor, a list of affect-rela
 
 Before going further, words related to emotions, but which, in the context of social tags, could have ambiguous or judgemental meaning are removed from the list, as suggested in [Hu et al.,2009](https://www.semanticscholar.org/paper/Lyric-Text-Mining-in-Music-Mood-Classification-Hu-Downie/e658ec86e033aae370ba680118a04431071cafe1). Therefore, appreciation remarks such as *'awesome', 'bad', 'fantastic', 'good', 'great', 'horrible'* which refer to the quality of music and preference words like *'adore', 'like', 'love', 'hate'* which might lead to ambiguous interpretations, are removed from the list of emotion-related words.
 
+In order to include all possible forms of the emotion-related words, they are stemmed to a root using the Porter Stemmer functionality provided in the [Natural Language Toolkit](https://www.nltk.org/book/).
 
+By searching tags containing these stems, they are also grouped, according to the stems' membership in the emotions clusters, discarding the tags not containing any of the stems of the emotion-related words.
+Following, a manual selection of tags is performed, as not all tags containing stems of affective words describe an emotion perceived when listening to a particular song. Tags that could, at the same time, be mapped to a positive emotion and to a negative emotion are identified and removed. Some of these tags with ambiguous meaning found are *'to listen when sad', 'to listen when happy', 'music for sad days', music for when you feel down'*.
+
+After this curation phase, each song has its remained tags replaced by the emotion words describing the clusters the tags are part of. It is important to mention that the normalized values associated with each tag at song-level, are taking into account when mapping the tags to valence and arousal values.
+At this stage, after removing the songs without at least one tag with affective information, the dataset size is reduced to 10,579 samples.
+Therefore, for each song, the tags are transformed into the words describing the emotions clusters, keeping their corresponding normalized count. In the case when more tags are mapped to the same word, the normalized count of the representative word is obtained by summing the values of the tags.
+
+<img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/tags_to_emotions.png" width=100%/>
+
+
+The [NRC VAD Lexicon](https://www.researchgate.net/publication/334118031_Obtaining_Reliable_Human_Ratings_of_Valence_Arousal_and_Dominance_for_20000_English_Words) comprises more than 20,000 english words with associated ratings of valence, arousal and dominance given by human annotators. The annotators were presented with groups of 4 words from which, besides assigning real values of emotion dimensions, they had to choose two words following a  Best-Worst Scaling technique. The final scores for each word were obtained by using the real values along with the proportions the respective word was ranked as best or worst and scaling them to range 0 .. 1.
+
+Using this resource, the 27 words representing emotions are embedded into valence-arousal space, taking into account their summed count at song-level.
+For every song, the valence and arousal scores extracted from the VAD Lexicon for each word are multiplied by the normalized count and the final ratings for the song are obtained by computing the average of the sum of the weighted values for valence and arousal dimensions:
+
+<img src="https://render.githubusercontent.com/render/math?math=Valence(S) = \displaystyle{\frac{\sum_{w} valence_{w}\cdot count_{S,w}}{\sum_{w} count_{S,w}}}">
 
 ## Support Images
 
 <img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/circumplex_model.png" width=100%/>
 
 <img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/emotions_distribution.png" width=100%/>
-
-<img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/tags_to_emotions.png" width=100%/>
 
 common support for MIR tasks in general
 common support for MIR tasks in general
