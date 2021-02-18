@@ -71,9 +71,7 @@ For every song, the valence and arousal scores extracted from the VAD Lexicon fo
 <p>
 <img src="https://render.githubusercontent.com/render/math?math=Arousal(S) = \displaystyle{\frac{\sum_{w} arousal_{w}\cdot count_{S,w}}{\sum_{w} count_{S,w}}}">
 </p>
-<p>
-<img src="https://render.githubusercontent.com/render/math?math=for S \textstyle{ - song\ in\ dataset\ \ and\ \ } w \textstyle{ - emotion\ word\ for\ }S ">
-</p>
+where *S* is a song in the dataset and *w* an emotion word in *S*.
 
 ## Support Images
 
