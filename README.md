@@ -84,9 +84,7 @@ The next phase in creating a new dataset with valid information, is updating the
 Another filtering process is performed considering the duration of songs and 32 more tracks are removed, bringing the dataset to a size of 9,972 samples.
 
 
-## Data Cleaning
-
-### Lyrics Analysis
+## Lyrics Cleaning
 
 The raw lyrics data contain a great amount of noise, as they are written by different users on *https://songmeanings.com/*, with no set of rules or format to be followed. Therefore, cleaning the lyrics data is a meticulous process that involves manual curating and a considerable amount of time.
 The lyrics have a particular structure, different than usual text data. Hence, before applying cleaning procedures commonly used in **NLP** tasks, this structure is studied for patterns identification with the scope of finding a set of rule that allow for automatization.
