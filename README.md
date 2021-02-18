@@ -8,6 +8,8 @@ consiting in : deezer_id, song_meanings_id, valence, arousal, list of (emotion_w
 
 ## Emotion Representation
 
+The Circumplex Model of Affect, defined in [Russell, 1980]](https://www.researchgate.net/publication/235361517_A_Circumplex_Model_of_Affect), that maps emotions to a 2D space defined by **valence** and **arousal** dimensions. Valence, displayed as the horizontal axis, represents the energy of emotion, ranging from positive to negative, while arousal, the vertical axis, represents the amount of intensity in emotion, ranging from low to high.
+
 <img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/circumplex_model.png" width=100%/>
 
 
@@ -43,17 +45,17 @@ The considerable volume of tags collected (795,368 unique tags) is extremely noi
 * tags containing song title
 * tags with similar recommendation
 * numeric tags
-* tags containing forms of word *favourite*
-* tags with musical genre *referrence*
-* tags with musical instruments *referrence*
+* tags containing forms of word *favorite*
+* tags with musical genre reference
+* tags with musical instruments reference
 * tags containing nationalities words
 
-In order to select the tags akin to an emotion descriptor, a list of affect-related words must first be composed. For this process, the affective lexicon WordNet Affect  [[Valitutti, 2004]](http://corpustext.com/reference/affect_wordnet.html) is used to create the base. This list is cleaned and extended with synonyms, related words and keywords contained in expressions describing motions, found using  the comprehensive Merriam-Webster online [dictionary](https://www.merriam-webster.com/dictionary/dictionary) and [thesaurus](https://www.merriam-webster.com/thesaurus). These words are grouped according to their meaning in 27 emotional categories, named with a corresponding emotion (\tabref{tab:chp5:emotion_groups}), using similarity paths defined in WordNet [Bentivogli et al., 2004](https://www.researchgate.net/publication/228902778_Revising_the_WORDNET_DOMAINS_Hierarchy_semantics_coverage_and_balancing) and, again, the Merriam-Webster Thesaurus.
+In order to select the tags akin to an emotion descriptor, a list of affect-related words must first be composed. For this process, the affective lexicon WordNet Affect  [[Valitutti, 2004]](http://corpustext.com/reference/affect_wordnet.html) is used to create the base. This list is cleaned and extended with synonyms, related words and keywords contained in expressions describing motions, found using  the comprehensive Merriam-Webster online [dictionary](https://www.merriam-webster.com/dictionary/dictionary) and [thesaurus](https://www.merriam-webster.com/thesaurus). These words are grouped according to their meaning in 27 emotional categories, named with a corresponding emotion, using similarity paths defined in WordNet [[Bentivogli et al., 2004]](https://www.researchgate.net/publication/228902778_Revising_the_WORDNET_DOMAINS_Hierarchy_semantics_coverage_and_balancing) and, again, the Merriam-Webster Thesaurus.
 
 <img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/emotions_groups.png" width=100%/>
 
 
-Before going further, words related to emotions, but which, in the context of social tags, could have ambiguous or judgemental meaning are removed from the list, as suggested in [Hu et al.,2009](https://www.semanticscholar.org/paper/Lyric-Text-Mining-in-Music-Mood-Classification-Hu-Downie/e658ec86e033aae370ba680118a04431071cafe1). Therefore, appreciation remarks such as *'awesome', 'bad', 'fantastic', 'good', 'great', 'horrible'* which refer to the quality of music and preference words like *'adore', 'like', 'love', 'hate'* which might lead to ambiguous interpretations, are removed from the list of emotion-related words.
+Before going further, words related to emotions, but which, in the context of social tags, could have ambiguous or judgmental meaning are removed from the list, as suggested in [Hu et al.,2009](https://www.semanticscholar.org/paper/Lyric-Text-Mining-in-Music-Mood-Classification-Hu-Downie/e658ec86e033aae370ba680118a04431071cafe1). Therefore, appreciation remarks such as *'awesome', 'bad', 'fantastic', 'good', 'great', 'horrible'* which refer to the quality of music and preference words like *'adore', 'like', 'love', 'hate'* which might lead to ambiguous interpretations, are removed from the list of emotion-related words.
 
 In order to include all possible forms of the emotion-related words, they are stemmed to a root using the Porter Stemmer functionality provided in the [Natural Language Toolkit](https://www.nltk.org/book/).
 
@@ -67,7 +69,7 @@ Therefore, for each song, the tags are transformed into the words describing the
 <img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/tags_to_emotions.png" width=100%/>
 
 
-The [NRC VAD Lexicon](https://www.researchgate.net/publication/334118031_Obtaining_Reliable_Human_Ratings_of_Valence_Arousal_and_Dominance_for_20000_English_Words) comprises more than 20,000 english words with associated ratings of valence, arousal and dominance given by human annotators. The annotators were presented with groups of 4 words from which, besides assigning real values of emotion dimensions, they had to choose two words following a  Best-Worst Scaling technique. The final scores for each word were obtained by using the real values along with the proportions the respective word was ranked as best or worst and scaling them to range 0 .. 1.
+The [NRC VAD Lexicon](https://www.researchgate.net/publication/334118031_Obtaining_Reliable_Human_Ratings_of_Valence_Arousal_and_Dominance_for_20000_English_Words) comprises more than 20,000 English words with associated ratings of valence, arousal and dominance given by human annotators. The annotators were presented with groups of 4 words from which, besides assigning real values of emotion dimensions, they had to choose two words following a  Best-Worst Scaling technique. The final scores for each word were obtained by using the real values along with the proportions the respective word was ranked as best or worst and scaling them to range 0 .. 1.
 
 Using this resource, the 27 words representing emotions are embedded into valence-arousal space, taking into account their summed count at song-level.
 For every song, the valence and arousal scores extracted from the VAD Lexicon for each word are multiplied by the normalized count and the final ratings for the song are obtained by computing the average of the sum of the weighted values for valence and arousal dimensions:
