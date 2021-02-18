@@ -46,3 +46,19 @@ The largest dataset available that suits a regression approach of MER task is, a
 | pessimism      	|      cynical, misanthropic, negative, pessimistic ...      	|         17         	|
 | romanticism    	|               amor, romantic, sweet, you ...               	|         109        	|
 | sadness        	|     cry, droopy, gloomy, melancholic, sad, unhappy ...     	|         400        	|
+
+
+
+
+
+
+
+
+
+| Pattern                         	| Description                                                                                                                                                                                                                                                         	| Action                                                                                                                                  	|
+|---------------------------------	|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------------------------	|
+| \n\n**[chorus]**\n              	| The first occurrence of this instruction in the lyrics text is usually followed by the text of the chorus, determined by the *newline* character succeeding the **[chorus]** tag and two *newline* characters announcing the end of the chorus text.                	| Memorize the text of the chorus for future replacement in lyrics text.                                                                  	|
+| \n\n**[chorus: repeat xN]**\n   	| This instruction  is usually followed by the text of the chorus, determined by the *newline* character succeeding the **[chorus]** tag and two *newline* characters announcing the end of the chorus text. It also means that the chorus is repeated ***N*** times. 	| Memorize the text of the chorus for future replacement in lyrics text and replace the tag with the chorus text, copied ***N-1*** times. 	|
+| \n\n**[chorus: repeat xN]**\n\n 	| This instruction announces the presence of the chorus text in the sang lyrics, that is repeated ***N*** times.                                                                                                                                                      	| Replace the tag with the previously memorized chorus text, copied ***N*** times.                                                        	|
+| \n\n**[chorus]**\n\n            	| This instruction announces the presence of the chorus text in the sang lyrics.                                                                                                                                                                                      	| Replace the tag with the previously memorized chorus text.                                                                              	|
+| \n**[repeat xN]**\n\n           	| This instruction is usually placed at the end of the part of lyrics text to be repeated. This beginning of the sequence to be repeated is marked by two **newline** characters.                                                                                     	| Identify the text to be repeated and replace the repetition tag.                                                                        	|
