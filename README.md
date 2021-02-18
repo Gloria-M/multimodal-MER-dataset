@@ -67,8 +67,7 @@ Using this resource, the 27 words representing emotions are embedded into valenc
 For every song, the valence and arousal scores extracted from the VAD Lexicon for each word are multiplied by the normalized count and the final ratings for the song are obtained by computing the average of the sum of the weighted values for valence and arousal dimensions:
 <img src="https://render.githubusercontent.com/render/math?math=Valence(S) = \displaystyle{\frac{\sum_{w} valence_{w}\cdot count_{S,w}}{\sum_{w} count_{S,w}}}">
 
-<img src="https://render.githubusercontent.com/render/math?math=Arousal(S) = \displaystyle{\frac{\sum_{w} arousal_{w}\cdot count_{S,w}}{\sum_{w} count_{S,w}}}">  ,  
-where *S* is a song in the dataset and *w* an emotion word in *S*.
+<img src="https://render.githubusercontent.com/render/math?math=Arousal(S) = \displaystyle{\frac{\sum_{w} arousal_{w}\cdot count_{S,w}}{\sum_{w} count_{S,w}}}">  ,  where *S* is a song in the dataset and *w* an emotion word in *S*.
 
 ## Support Images
 
