@@ -167,7 +167,7 @@ The largest dataset available that suits a regression approach of MER task is, a
 <center>
 
 |                	|                                                            	| No. of unique tags 	|
-|----------------	|:----------------------------------------------------------:	|:------------------:	|
+|:---------------	|:-----------------------------------------------------------	|:------------------:	|
 | aggressiveness 	|     aggressive, belligerent, hostile, violent, wild ...    	|         44         	|
 | amusement      	|    amusing, comical, funny, giggle, hilarious, laugh ...   	|         118        	|
 | anger          	|    angry, angst, furious, fury, mad, outraged, rage ...    	|         76         	|
