@@ -5,6 +5,12 @@ This repository presents a new dataset for the Music Emotion Recognition (MER) t
 ### TO MODIFY
 consiting in : deezer_id, song_meanings_id, valence, arousal, list of (emotion_word, count)
 
+
+## Emotion Representation
+
+<img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/circumplex_model.png" width=100%/>
+
+
 ## Base Dataset
 
 The largest dataset available that suits a regression approach of MER task is, at the moment of writing, the Deezer Mood Detection Dataset [(Delbouys et al., 2018)](https://arxiv.org/abs/1809.07276). For each track, this set contains the corresponding *Deezer ID*, the *MSD ID*, the *artist* and *title* and values for *valence* and *arousal*. This data collected by researchers at Deezer is itself derived from the Million Song Dataset [(Bertin-Mahieux et al., 2011)](https://www.researchgate.net/publication/220723656_The_Million_Song_Dataset), a common support for MIR tasks in general.
@@ -16,7 +22,7 @@ For building the new dataset, the first step is selecting the songs for which ly
 
  The [SongMeanings](https://songmeanings.com/) site provides both the lyrics of the songs and comments on the meaning of the lyrics, as they are interpreted by the users.
 
-On the page of each track(listed on the website) the corresponding lyrics are identified by the `<div class_='holder lyric-box' >` tag and the comments section is announced by the `<div class_='text' >` tag.
+On the page of each track, the corresponding lyrics are identified by the `<div class_='holder lyric-box' >` tag and the comments section is announced by the `<div class_='text' >` tag.
 
 Acquiring the comments from this website comes with an important advantage that diminish the need for additional filtering: the comments are sorted based on the number of votes in descending order with the most voted comment -the most reliable one- listed first. The comments are displayed on multiple pages, but the first one contains just enough comments of good quality, therefore only the data in the first page is collected.
 
@@ -100,8 +106,3 @@ The structural instructions are another class of patterns discovered, with no re
 <img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/lyrics_structural_patterns.png" width=100%/>
 
 These transformations bring the lyrics text to a format that allows applying common preprocessing techniques used in NLP tasks.
-
-
-## Support Images
-
-<img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/circumplex_model.png" width=100%/>
