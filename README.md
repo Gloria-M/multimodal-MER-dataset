@@ -42,6 +42,14 @@ The considerable volume of tags collected (795,368 unique tags) is extremely noi
 * tags with musical instruments *referrence*
 * tags containing nationalities words
 
+In order to select the tags akin to an emotion descriptor, a list of affect-related words must first be composed. For this process, the affective lexicon WordNet Affect  [Valitutti, 2004](http://corpustext.com/reference/affect_wordnet.html) is used to create the base. This list is cleaned and extended with synonyms, related words and keywords contained in expressions describing motions, found using  the comprehensive Merriam-Webster online [dictionary](https://www.merriam-webster.com/dictionary/dictionary) and [thesaurus](https://www.merriam-webster.com/thesaurus). These words are grouped according to their meaning in 27 emotional categories, named with a corresponding emotion (\tabref{tab:chp5:emotion_groups}), using similarity paths defined in WordNet [Bentivogli et al., 2004](https://www.researchgate.net/publication/228902778_Revising_the_WORDNET_DOMAINS_Hierarchy_semantics_coverage_and_balancing) and, again, the Merriam-Webster Thesaurus.
+
+<img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/emotions_groups.png" width=100%/>
+
+
+Before going further, words related to emotions, but which, in the context of social tags, could have ambiguous or judgemental meaning are removed from the list, as suggested in [Hu et al.,2009](https://www.semanticscholar.org/paper/Lyric-Text-Mining-in-Music-Mood-Classification-Hu-Downie/e658ec86e033aae370ba680118a04431071cafe1). Therefore, appreciation remarks such as *'awesome', 'bad', 'fantastic', 'good', 'great', 'horrible'* which refer to the quality of music and preference words like *'adore', 'like', 'love', 'hate'* which might lead to ambiguous interpretations, are removed from the list of emotion-related words.
+
+
 
 ## Support Images
 
@@ -52,7 +60,6 @@ The considerable volume of tags collected (795,368 unique tags) is extremely noi
 <img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/tags_to_emotions.png" width=100%/>
 
 common support for MIR tasks in general
-<img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/emotions_groups.png" width=100%/>
 common support for MIR tasks in general
 <img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/lyrics_repetition_patterns.png" width=100%/>
 
