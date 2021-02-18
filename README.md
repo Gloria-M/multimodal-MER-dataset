@@ -31,9 +31,16 @@ Mapping the tracks in the Deezer dataset to the *last.fm* database by their MSD 
 
 In order to create the new dataset with information as up-to-date as possible, instead of querying the 2011 tags database, the tags available at the time of writing are acquired using [Last.fm API](https://www.last.fm/api/). This allows access to a maximum of 100 tags per song, sorted by their popularity and the normalized value indicating the count of listeners attributing the respective tag to a song. Using this method, 10,919 tracks with tags are found.
 
-The considerable volume of tags collected (795,368 unique tags) is extremely noisy and contains lot of unusable data. Therefore, to get to a format which allows mapping to emotions space, a thorough cleaning process must be performed.
+The considerable volume of tags collected (795,368 unique tags) is extremely noisy and contains lot of unusable data. Therefore, to get to a format which allows mapping to emotions space, a thorough cleaning process must be performed. The musical genre, instruments names or similarity tags, along many others, are removed following the removal criteria presented, reducing the volume of social tags to 390,698:
 
-Although the musical genre, instruments names or similarity tags can be useful for MIR tasks, they do not serve the purpose of this study. Therefore, these, along many others, are removed following the removal criteria presented, reducing the volume of social tags to 390,698:
+* tags containing artist name
+* tags containing song title
+* tags with similar recommendation
+* numeric tags
+* tags containing forms of word *favourite*
+* tags with musical genre *referrence*
+* tags with musical instruments *referrence*
+* tags containing nationalities words
 
 
 ## Support Images
