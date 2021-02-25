@@ -10,7 +10,7 @@ consisting in : deezer_id, song_meanings_id, valence, arousal, list of (emotion_
 
 The Circumplex Model of Affect, defined in [[Russell, 1980]](https://www.researchgate.net/publication/235361517_A_Circumplex_Model_of_Affect), that maps emotions to a 2D space defined by **valence** and **arousal** dimensions. Valence, displayed as the horizontal axis, represents the energy of emotion, ranging from positive to negative, while arousal, the vertical axis, represents the amount of intensity in emotion, ranging from low to high. This scheme allows for a division of the emotion space in four quadrants.
 
-<img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/circumplex_model.png" width=100%/>
+<img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/images/circumplex_model.png" width=100%/>
 
 
 ## Base Dataset
@@ -52,7 +52,7 @@ The considerable volume of tags collected (795,368 unique tags) is extremely noi
 
 In order to select the tags akin to an emotion descriptor, a list of affect-related words must first be composed. For this process, the affective lexicon WordNet Affect  [[Valitutti, 2004]](http://corpustext.com/reference/affect_wordnet.html) is used to create the base. This list is cleaned and extended with synonyms, related words and keywords contained in expressions describing motions, found using  the comprehensive Merriam-Webster online [dictionary](https://www.merriam-webster.com/dictionary/dictionary) and [thesaurus](https://www.merriam-webster.com/thesaurus). These words are grouped according to their meaning in 27 emotional categories, named with a corresponding emotion, using similarity paths defined in WordNet [[Bentivogli et al., 2004]](https://www.researchgate.net/publication/228902778_Revising_the_WORDNET_DOMAINS_Hierarchy_semantics_coverage_and_balancing) and, again, the Merriam-Webster Thesaurus.
 
-<img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/emotions_groups.png" width=100%/>
+<img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/images/emotions_groups.png" width=100%/>
 
 
 Before going further, words related to emotions, but which, in the context of social tags, could have ambiguous or judgmental meaning are removed from the list, as suggested in [Hu et al.,2009](https://www.semanticscholar.org/paper/Lyric-Text-Mining-in-Music-Mood-Classification-Hu-Downie/e658ec86e033aae370ba680118a04431071cafe1). Therefore, appreciation remarks such as *'awesome', 'bad', 'fantastic', 'good', 'great', 'horrible'* which refer to the quality of music and preference words like *'adore', 'like', 'love', 'hate'* which might lead to ambiguous interpretations, are removed from the list of emotion-related words.
@@ -66,7 +66,7 @@ After this curation phase, each song has its remained tags replaced by the emoti
 At this stage, after removing the songs without at least one tag with affective information, the dataset size is reduced to 10,579 samples.
 Therefore, for each song, the tags are transformed into the words describing the emotions clusters, keeping their corresponding normalized count. In the case when more tags are mapped to the same word, the normalized count of the representative word is obtained by summing the values of the tags.
 
-<img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/tags_to_emotions.png" width=100%/>
+<img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/images/tags_to_emotions.png" width=100%/>
 
 
 The [NRC VAD Lexicon](https://www.researchgate.net/publication/334118031_Obtaining_Reliable_Human_Ratings_of_Valence_Arousal_and_Dominance_for_20000_English_Words) comprises more than 20,000 English words with associated ratings of valence, arousal and dominance given by human annotators. The annotators were presented with groups of 4 words from which, besides assigning real values of emotion dimensions, they had to choose two words following a  Best-Worst Scaling technique. The final scores for each word were obtained by using the real values along with the proportions the respective word was ranked as best or worst and scaling them to range 0 .. 1.
@@ -81,7 +81,7 @@ For every song, the valence and arousal scores extracted from the VAD Lexicon fo
 
 This annotation strategy resulted in an unbalanced distribution of the data in the 2D space of emotions, with quadrant 2 appearing heavily underrepresented. This reveals that strong negative emotions such as *'anger', 'aggressivity'* are not frequently perceived in music.
 
-<img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/data_distribution.png" width=100%/>
+<img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/images/data_distribution.png" width=100%/>
 
 
 
@@ -101,11 +101,11 @@ As a result of a series of manual transformations and removals, different types 
 In differentiating between the types of patterns discovered, the *newline* (\n) character has the greatest role.
 The most important patterns are ones playing a role in changing the text of lyrics, as described below:
 
-<img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/lyrics_repetition_patterns.png" width=100%/>
+<img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/images/lyrics_repetition_patterns.png" width=100%/>
 
 The structural instructions are another class of patterns discovered, with no relevance for the strategy chosen in recognizing emotions in music, therefore are removed from the lyrics text. They may contain tags present in the important patterns mentioned earlier, but in different configurations defined by the occurrence of the *newline* character.
 
-<img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/lyrics_structural_patterns.png" width=100%/>
+<img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/images/lyrics_structural_patterns.png" width=100%/>
 
 These transformations bring the lyrics text to a format that allows applying common preprocessing techniques used in NLP tasks.
 
