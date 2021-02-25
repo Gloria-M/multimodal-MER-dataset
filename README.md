@@ -1,6 +1,20 @@
 # Building a dataset for multi-modal Music Emotion Recognition
 
-This repository presents a new dataset for the Music Emotion Recognition (MER) task, consisting in audio, lyrics and listeners' comments modalities, created by employing different techniques such as web-scraping, manual cleaning of social tags and manual identification of patterns with the purpose of automatization of a task.
+This repository presents a new dataset for the Music Emotion Recognition (MER) task, consisting in audio, lyrics and listeners' comments modalities, annotated with scores for **valence** and **arousal**, and also lists of **emotion-related word & count** tuples.
+
+Due to copyright restrictions, the raw audio, lyrics and comments are not released, but the audio can be retrieved using *Deezer API*, and the lyrics and comments are available in list of tokens format, making the dataset easy to experiment with.
+
+## Files Description
+
+   **data_info.json**  -  deezer_id *(key)*
+                          ---------
+                              |
+                              |--  msd_id *(song id in the MillionSongDataset)*
+                              |--  song_meanings_id *(song id on the Song Meanings site)*
+                              |--  artist_name
+                              |--  song_title
+
+
 
 ### TO MODIFY
 consisting in : deezer_id, song_meanings_id, valence, arousal, list of (emotion_word, count)
