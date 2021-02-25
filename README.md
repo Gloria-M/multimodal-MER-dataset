@@ -117,8 +117,8 @@ Starting with the texts in *string* format, the following transformations are ap
   <li>
   replace words in short form with their extended forms
   </li>
-  <p>- 'm &#8594 am<br>
-  <p>- 're &#8594 are<br>
-  <p>- 've &#8594 have<br>
-  <p>- 'd &#8594 would<br>
+    - 'm &#8594 am<br>
+    - 're &#8594 are<br>
+    - 've &#8594 have<br>
+    - 'd &#8594 would<br>
 </ul>
