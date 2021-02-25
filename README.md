@@ -152,6 +152,7 @@ The steps presented above conclude with tokenization, converting the texts into 
   <li>
   discard non-english words, using [pyenchant](http://pyenchant.github.io/pyenchant/)
   </li>
+  <li>
   keep the non-english words that appear in the slangs lexicon [[Wu et al., 2016]](https://arxiv.org/abs/1608.05129)
   </li>
 </ul>
