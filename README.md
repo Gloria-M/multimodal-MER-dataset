@@ -115,8 +115,7 @@ These transformations bring the lyrics text to a format that allows applying com
 Starting with the texts in *string* format, the following transformations are applied:
 <ul>
   <li>
-  replace words in short form with their extended forms
-  </li>
+  replace words in short form with their extended forms <br>
     - 'm &#8594 am <br>
     - 're &#8594 are <br>
     - 've &#8594 have <br>
@@ -129,4 +128,5 @@ Starting with the texts in *string* format, the following transformations are ap
     - n't &#8594 n not <br>
     - n' &#8594 ng <br>
     - 's &#8594 ''
+</li>
 </ul>
