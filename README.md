@@ -150,9 +150,9 @@ The steps presented above conclude with tokenization, converting the texts into 
   remove stopwords
   </li>
   <li>
-  discard non-english words, using [pyenchant](http://pyenchant.github.io/pyenchant/)
+  discard non-english words, using <a href="http://pyenchant.github.io/pyenchant/">pyenchant</a>
   </li>
   <li>
-  keep the non-english words that appear in the slangs lexicon [[Wu et al., 2016]](https://arxiv.org/abs/1608.05129)
+  keep the non-english words that appear in the slangs lexicon <a href="https://arxiv.org/abs/1608.05129>[Wu et al., 2016]</a>
   </li>
 </ul>
