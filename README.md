@@ -8,7 +8,6 @@ Due to copyright restrictions, the raw audio, lyrics and comments are not releas
 
 ### data_info.json
 &nbsp; &nbsp; &nbsp; **deezer_id** *(main key)*
-<!-- &nbsp; &nbsp; &nbsp; | <br> -->
 &nbsp; &nbsp; &nbsp; | --  **msd_id** *(song id in the MillionSongDataset)*<br>
 &nbsp; &nbsp; &nbsp; | --  **song_meanings_id** *(song id on the Song Meanings site)*<br>
 &nbsp; &nbsp; &nbsp; | --  **artist_name**<br>
