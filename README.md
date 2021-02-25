@@ -18,12 +18,15 @@ Due to copyright restrictions, the raw audio, lyrics and comments are not releas
 &nbsp; &nbsp; &nbsp; | --  **valence** <br>
 &nbsp; &nbsp; &nbsp; | --  **arousal** <br>
 &nbsp; &nbsp; &nbsp; | --  **emotion**  <br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| --  [**emotion_word**, **count**]
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | --  [**emotion_word**, **count**]
 
+### lyrics.json
+&nbsp; &nbsp; &nbsp; **deezer_id** *(main key)*  
+&nbsp; &nbsp; &nbsp; | --  list of lyrics tokens <br>
 
-
-### TO MODIFY
-consisting in : deezer_id, song_meanings_id, valence, arousal, list of (emotion_word, count)
+### comments.json
+&nbsp; &nbsp; &nbsp; **deezer_id** *(main key)*  
+&nbsp; &nbsp; &nbsp; | --  list of comments tokens <br>
 
 
 ## Emotion Representation
