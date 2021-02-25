@@ -108,3 +108,17 @@ The structural instructions are another class of patterns discovered, with no re
 <img src="https://github.com/Gloria-M/multimodal-MER-dataset/blob/main/Images/lyrics_structural_patterns.png" width=100%/>
 
 These transformations bring the lyrics text to a format that allows applying common preprocessing techniques used in NLP tasks.
+
+
+## Lyrics and Comments preprocessing
+
+Starting with the texts in *string* format, the following transformations are applied:
+<ul>
+  <li>
+  replace words in short form with their extended forms
+  - 'm &#8594 am
+  - 're &#8594 are
+  - 've &#8594 have
+  - 'd &#8594 would
+  </li>
+</ul>
