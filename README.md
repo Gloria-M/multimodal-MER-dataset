@@ -128,5 +128,30 @@ Starting with the texts in *string* format, the following transformations are ap
     - n't &#8594 n not <br>
     - n' &#8594 ng <br>
     - 's &#8594 ''
-</li>
+  </li>
+  <li>
+  remove punctuation symbols (*' . ' , ' , ' , ' ; ' , '!', '', '\*'*, etc.)
+  </li>
+  <li>
+  remove spacing instructions (*'\n', '\t'*)
+  </li>
+</ul>
+
+
+The steps presented above conclude with tokenization, converting the texts into lists of words. The preprocessing phase ends after curating the words resulted, as follows:
+<ul>
+  <li>
+  correct identified misspellings (*'urself', 'thered'*, etc.)
+  </li>
+  <li>
+  replace censored words with their uncensored version
+  </li>
+  <li>
+  remove stopwords
+  </li>
+  <li>
+  discard non-english words, using [pyenchant](http://pyenchant.github.io/pyenchant/)
+  </li>
+  keep the non-english words that appear in the slangs lexicon [[Wu et al., 2016]](https://arxiv.org/abs/1608.05129)
+  </li>
 </ul>
