@@ -6,13 +6,13 @@ Due to copyright restrictions, the raw audio, lyrics and comments are not releas
 
 ## Files Description
 
-   **data_info.json**   
-   deezer_id *(key)* <br>
-   | <br>
-   |--  msd_id *(song id in the MillionSongDataset)* <br>
-   |--  song_meanings_id *(song id on the Song Meanings site)* <br>
-   |--  artist_name <br>
-   |--  song_title <br>
+***data_info.json***
+
+> deezer_id *(main key)*
+  >> --  msd_id *(song id in the MillionSongDataset)*
+  >> --  song_meanings_id *(song id on the Song Meanings site)*
+  >> --  artist_name
+  >> --  song_title
 
 
 
