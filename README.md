@@ -13,6 +13,12 @@ Due to copyright restrictions, the raw audio, lyrics and comments are not releas
 &nbsp; &nbsp; &nbsp; | --  **artist_name**<br>
 &nbsp; &nbsp; &nbsp; | --  **song_title**
 
+### annotations.json
+&nbsp; &nbsp; &nbsp; **deezer_id** *(main key)*  
+&nbsp; &nbsp; &nbsp; | --  **valence** <br>
+&nbsp; &nbsp; &nbsp; | --  **arousal** <br>
+&nbsp; &nbsp; &nbsp; | --  **emotion**  <br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | --  [**emotion_word**, **count**]
 
 
 
