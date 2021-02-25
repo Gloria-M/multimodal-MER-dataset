@@ -18,7 +18,7 @@ Due to copyright restrictions, the raw audio, lyrics and comments are not releas
 &nbsp; &nbsp; &nbsp; | --  **valence** <br>
 &nbsp; &nbsp; &nbsp; | --  **arousal** <br>
 &nbsp; &nbsp; &nbsp; | --  **emotion**  <br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | --  [**emotion_word**, **count**]
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| --  [**emotion_word**, **count**]
 
 
 
